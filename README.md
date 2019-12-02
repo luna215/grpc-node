@@ -18,4 +18,4 @@ Finally run
 ```
 node client.js
 ```
-You should see that our client side is now communicating with our grpc server that is running on the docker container
+You should now see that our client side is now communicating with our grpc server that is running on the docker container
