@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Native Vue</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <gen-button />
+    </div>
+    <script>
+
+        Vue.component('GenButton', {
+            template: '<div><button class="button" v-on:click="print">Click Me</button><p>{{ response }}</p></div>',
+            methods: {
+                print() {
+                    this.response = 'paul';
+                }
+            },
+            data() {
+                return {
+                    response: ''
+                }
+            }
+        });
+
+        const app = new Vue({
+            el: '#app',
+            data: {
+                display: 'paul'
+            }
+        })
+        </script>
+</body>
+</html>
